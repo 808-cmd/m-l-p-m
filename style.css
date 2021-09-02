@@ -1,0 +1,289 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Be Vietnam', sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+header,
+.four-parts,
+.people,
+.info,
+footer{
+    display: flex;
+    width: 100%;
+}
+
+header{
+    padding-inline: max(20px, 5%);
+    padding-block: max(20px, 3%);
+    justify-content: space-between;
+}
+
+header,
+.info{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.logo{
+    height: 30px;
+}
+
+.people{
+    flex-direction: column;
+    justify-content: centre;
+    align-items: center;
+    gap: 30px;
+}
+
+.info{
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info,
+footer{
+    padding-inline: 5%;
+    padding-block: 3%;
+    row-gap: 20px;
+}
+
+footer{
+    justify-content: space-between;
+    background-color: hsl(228, 39%, 23%);
+    color: hsl(0, 0%, 98%);
+}
+
+.nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger{
+    display: none;
+    background-image: url("images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.nav-links{
+    flex-direction: row;
+    justify-content: center;
+}
+
+.four-parts{
+    padding-inline: max(20px, 5%);
+    row-gap: 50px;
+}
+
+.four-parts,
+.todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.todo div,
+.comments{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.simplify{
+    width: max(400px , 40%);
+}
+
+.number{
+    height: 30px;
+    padding-inline: 15px;
+}
+
+.paragraph{
+    width: 80%;
+}
+
+.small{
+    width: max(200px , 35%);
+}
+
+.small .button{
+    width: 137.9px;
+}
+
+.large{
+    width: 50%;
+}
+
+.illustration{
+    width: 100%;
+    height: 100%;
+}
+
+.person{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-inline: 20px;
+}
+
+.pp{
+    width: 75px;
+    height: 75px;
+}
+
+.person p{
+    padding-top: 0;
+    text-align: center;
+}
+
+.last-person{
+    display: none;
+}
+
+.footer-logo{
+    width:122px;
+    height: 20px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.socials{
+    padding-inline: 5px;
+}
+
+.icon div{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width:700px) {
+    .small,
+    .large{
+        width: 100%;
+    }
+
+    .info{
+        text-align: center;
+        padding-block: 50px;
+        margin-top: 50px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .icon{
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    .socials{
+        padding-inline: 20px;
+    }
+
+    .footer-links{
+        padding-inline: min(100px , 10%);
+    }
+}
+
+@media only screen  and (max-width: 970px){
+    .nav{
+        width: 100%;
+    }
+    .burger{
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+        width: min(400px, 100%);
+        flex-direction: column;
+    }
+    .nav-button{
+        display: none;
+    }
+    .burger.clicked{
+        background-image: url("images/icon-close.svg");
+    }
+    .nav-links.clicked{
+        display: flex;
+    }
+}
+
+ul{
+    display: flex;
+    padding-inline-start: 0px;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-inline: 25px;
+}
+
+h3{
+    font-size: 3.3em;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h1{
+    font-size: 1.35em;
+}
+
+p{
+    padding-block: 20px;
+}
+
+.button{
+    padding-block: 10px;
+}
+
+.white{
+    height: 43.2px;
+}
+
+p,
+a{
+    font-size: clamp(16px, 1.2vw, 20px);
+    text-decoration: none;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    width: 155px;
+}
+
+.number,
+.button{
+    background-color: hsl(12, 88%, 59%);
+    border-radius: 20px;
+}
