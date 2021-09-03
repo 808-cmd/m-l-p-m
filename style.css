@@ -7,7 +7,7 @@
 
 body{
     font-family: 'Be Vietnam', sans-serif;
-    background-color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 99%);
 }
 
 header,
@@ -58,8 +58,8 @@ footer{
 
 footer{
     justify-content: space-between;
-    background-color: hsl(228, 39%, 23%);
-    color: hsl(0, 0%, 98%);
+    align-content: center;
+    background-color: hsl(233, 12%, 13%);
 }
 
 .nav{
@@ -180,10 +180,33 @@ footer{
     justify-content: space-around;
 }
 
+form{
+    width: 30%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form-control{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 @media only screen and (max-width:700px) {
     .small,
     .large{
         width: 100%;
+    }
+
+    .comments{
+        flex-direction: column;
+    }
+
+    .last-person{
+        display: flex;
     }
 
     .info{
@@ -193,11 +216,14 @@ footer{
     }
 
     footer{
-        flex-direction: column;
+        padding-block: 40px;
+        flex-direction: column-reverse;
+        gap: 50px;
     }
 
     .icon{
         row-gap: 20px;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -208,9 +234,19 @@ footer{
     .footer-links{
         padding-inline: min(100px , 10%);
     }
+
+    form{
+        width: 100%;
+    }
 }
 
 @media only screen  and (max-width: 970px){
+    body{
+        text-align: center;
+    }
+    header{
+        justify-content: space-around;
+    }
     .nav{
         width: 100%;
     }
@@ -229,7 +265,22 @@ footer{
         background-image: url("images/icon-close.svg");
     }
     .nav-links.clicked{
+        margin-top: 20px;
         display: flex;
+        justify-content: center;
+        background-color: hsl(0, 0%, 98%);
+    }
+    .nav-links.clicked li{
+        justify-content: center;
+        padding-block: 5px;
+    }
+    .four-parts article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        margin-top: 50px;
     }
 }
 
@@ -258,11 +309,15 @@ h1{
     font-size: 1.35em;
 }
 
-p{
+p,
+input,
+button{
     padding-block: 20px;
 }
 
-.button{
+.button,
+input,
+button{
     padding-block: 10px;
 }
 
@@ -270,9 +325,14 @@ p{
     height: 43.2px;
 }
 
+.nav-links a,
+.foot a{
+    font-weight: 600;
+}
+
 p,
 a{
-    font-size: clamp(16px, 1.2vw, 20px);
+    font-size: clamp(16px, 1vw, 20px);
     text-decoration: none;
 }
 
@@ -282,8 +342,73 @@ a{
     width: 155px;
 }
 
-.number,
-.button{
-    background-color: hsl(12, 88%, 59%);
+input,
+button{
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 14px;
+    padding-inline: 20px;
     border-radius: 20px;
+    border: none;
+}
+
+.number,
+.button,
+button{
+    border-radius: 20px;
+}
+
+.nav-links a,
+h3,
+h2,
+h1,
+p{
+    color: hsl(228, 39%, 23%);
+}
+
+.nav-links a:hover{
+    color: hsl(13, 100%, 96%);
+}
+
+button,
+.orange a,
+.foot a,
+.simplify,
+.number{
+    color: hsl(0, 0%, 98%);
+}
+
+.foot a:hover{
+    color: hsl(12, 88%, 59%);
+}
+
+button:hover,
+.orange:hover a,
+.number:hover{
+    color:hsl(12, 88%, 59%) ;
+}
+
+.white a{
+    color: hsl(12, 88%, 59%);
+}
+
+
+.number,
+.orange,
+button,
+.info{
+    background-color: hsl(12, 88%, 59%);
+}
+
+.number:hover,
+.orange:hover,
+button:hover{
+    background-color: hsl(13, 100%, 96%);
+}
+
+.white{
+    background-color: hsl(0, 0%, 98%);
+}
+
+.white:hover a{
+    color: hsl(13, 100%, 96%);
 }
